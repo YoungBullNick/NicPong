@@ -1,17 +1,13 @@
 var canvasWidth = 500, canvasHeight = 500;
 var myBall;
-var ballSize = 35;
+var ballSize = 25;
 var myBall_xPos = canvasWidth/2, myBall_yPos = canvasHeight/2;
 var myBall_xVel = 0, myBall_yVel = 0;
 var myBall_top    = myBall_yPos - ballSize/2,	myBall_bottom = myBall_yPos + ballSize/2,	myBall_left   = myBall_xPos - ballSize/2,	myBall_right  = myBall_xPos + ballSize/2;
 var r = 0, g = 0, b = 0;
-function setup() {
-	createCanvas(canvasWidth, canvasHeight);
-	rectMode(CENTER);
-	myBall = rect(myBall_xPos,myBall_yPos,ballSize,ballSize);
-	// console.log(myBall);
-	myBall_xVel = random(-2,3);
-	myBall_yVel = random(-2,3);}
+function setup() {	createCanvas(canvasWidth, canvasHeight);  rectMode(CENTER);	myBall = rect(myBall_xPos,myBall_yPos,ballSize,ballSize);	// console.log(myBall);
+	myBall_xVel = random(-1,7);
+	myBall_yVel = random(-1,7);}
 function draw() {background(color(r, g, b));
 moveAndBounceWall();
 	rect(myBall_xPos,myBall_yPos,ballSize,ballSize);}

@@ -26,3 +26,25 @@ function colorChange() {
 	g = random(255);
 	b = random(255);
   }
+function keyPressed() {
+	}
+function movePaddles() {
+	if (keyIsDown(87)) {
+		paddleL_yPos -= paddleVel;
+	} else if (keyIsDown(83)) {
+		paddleL_yPos += paddleVel;	}
+	if (keyIsDown(79)) {
+		paddleR_yPos -= paddleVel;
+	} else if (keyIsDown(76)) {
+		paddleR_yPos += paddleVel;}
+} var paddleWidth = 10, paddleLength = canvasHeight/6, paddleVel = 5,
+	paddleL_xPos = ballSize, paddleR_xPos = canvasWidth - ballSize,
+	paddleL_yPos = canvasHeight / 2, paddleR_yPos = canvasHeight / 2;
+var r = 0, g = 0, b = 0;function draw() {
+	background(color(r,g,b));
+	rect(paddleL_xPos,paddleL_yPos,paddleWidth,paddleLength);
+	rect(paddleR_xPos,paddleR_yPos,paddleWidth,paddleLength);
+	movePaddles();
+	moveAndBounceWall();
+	rect(myBall_xPos,myBall_yPos,ballSize,ballSize);
+}

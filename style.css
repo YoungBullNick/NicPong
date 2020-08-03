@@ -1,3 +1,0 @@
-myBall_xPos  = myBall_xPos + myBall_xVel;
-	myBall_left  = myBall_xPos - ballSize/2;
-	myBall_right = myBall_xPos + ballSize/2;

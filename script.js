@@ -86,4 +86,4 @@ if ((myBall_bottom >= paddleR_top) && (myBall_top <= paddleR_bottom)) {
 			console.log("Bounce Right " + bounceR);
 		}
 	}
-}
+}  
